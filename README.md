@@ -22,11 +22,12 @@ $ kubectl exec -it grpc-netshoot -- /bin/bash
 $ grpcurl --plaintext grpcserver.grpcserver.svc.cluster.local:9000 list
 grpc.reflection.v1alpha.ServerReflection
 helloworld.helloworld  
-
+```
 
 ```
 $ git clone https://github.com/git4example/helloworld-grpc.git
 ```
+
 Edit `./app/helloworld_client.py` to have your service endpoint like `self.host = 'grpcserver.grpcserver.svc.cluster.local'`
 
 ```
