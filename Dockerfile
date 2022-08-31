@@ -16,5 +16,6 @@ RUN rm -rf /var/cache/apk/*
 FROM nicolaka/netshoot
 COPY --from=0 /usr/local/go/ /usr/local/go/
 COPY --from=0 /go/bin /go/bin
+RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 WORKDIR /
 ENV PATH="/usr/local/go/bin:/go/bin:${PATH}"
